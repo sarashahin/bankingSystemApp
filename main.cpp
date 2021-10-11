@@ -31,7 +31,7 @@ class Account
         static long getLastAccNum();
 
         friend ofstream &operator << (ofstream &ofs, Account &acc);
-        friend ifstream &operator << (ifstream &ifs, Account &acc);
+        friend ifstream &operator >> (ifstream &ifs, Account &acc);
         friend ostream &operator << (ostream &os, Account &acc);
 };
 long Account :: nextAccNum = 0;
@@ -275,5 +275,7 @@ Bank::~Bank()
   }
   outfile.close();
 }
+
+
 
  
